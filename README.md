@@ -41,6 +41,16 @@ powertui
 | `r` | Refresh |
 | `q` / `Esc` | Quit |
 
+## Battery Health
+
+Health is calculated as:
+
+```
+health = (energy_full / energy_full_design) * 100
+```
+
+These values are read from `/sys/class/power_supply/<battery>/`.
+
 ## Requirements
 
 - Linux with `/sys/class/power_supply/` (for battery info)
